@@ -1,22 +1,31 @@
+# ベースイメージとしてPython 3.11を使用
 FROM python:3.11
+
+# 作業ディレクトリの設定
 WORKDIR /bot
 
-# 更新・日本語化
-RUN apt-get update && apt-get -y install locales && apt-get -y upgrade && \
-	localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
-ENV LANG ja_JP.UTF-8
-ENV LANGUAGE ja_JP:ja
-ENV LC_ALL ja_JP.UTF-8
-ENV TZ Asia/Tokyo
-ENV TERM xterm
+# ロケール設定のための更新とインストール、日本語ロケールの設定
+RUN apt-get update && \
+    apt-get -y install locales && \
+    apt-get -y upgrade && \
+    localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
 
-# pip install
+# 環境変数の設定
+ENV LANG=ja_JP.UTF-8 \
+    LANGUAGE=ja_JP:ja \
+    LC_ALL=ja_JP.UTF-8 \
+    TZ=Asia/Tokyo \
+    TERM=xterm
+
+# Pythonパッケージのインストール
 COPY requirements.txt /bot/
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# ソースコードのコピー
 COPY . /bot
 
-# ポート開放 (uvicornで指定したポート)
+# ポート開放
 EXPOSE 8080
 
-# 実行
-CMD python app/main.py
+# アプリケーションの実行
+CMD ["python", "app/main.py"]
