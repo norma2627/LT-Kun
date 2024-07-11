@@ -35,11 +35,10 @@ async def on_message(message: discord.Message):
 @client.command(name="test", description="テスト")
 async def test(ctx: discord.ApplicationContext):
     await ctx.respond("てすとてすと")
-
+"""
 
 # テーマを保存するためのtheme_title変数を用意
 theme_title = None
-"""
 
 # テーマを保存
 @bot.command(name="post", description="ボットにテーマを保存")
