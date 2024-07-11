@@ -16,13 +16,13 @@ ENV TERM xterm
 
 # pip install
 COPY requirements.txt /bot/
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # アプリケーションコードのコピー
 COPY . /bot
 
 # ポート開放 (uvicornで指定したポート)
-EXPOSE 2627
+EXPOSE 8080
 
 # 実行
-CMD ["python", "app/main.py"]
+CMD python app/main.py

@@ -10,11 +10,11 @@ app = FastAPI() # アプリケーションインスタンスを作成
 
 @app.get("/")   # ルートエンドポイントの定義
 async def root():
-    return {"message": "サーバーの起動完了"}
+    return {"message": "The server is up!"}
 
 # サーバの起動
 def start():
-    uvicorn.run(app, host="0.0.0.0", port=2627)
+    uvicorn.run(app, host="0.0.0.0", port=8080)
 
 # サーバを別スレッドで実行
 def server_thread():
