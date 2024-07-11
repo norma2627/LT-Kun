@@ -12,7 +12,7 @@ TOKEN = os.environ.get('TOKEN')
 # botの元オブジェクトを生成
 intents = discord.Intents.default()
 intents.message_content = True  # メッセージ内容を取得する権限を付与
-bot = discord.Bot(intents=intents)
+bot = discord.Client(intents=intents)
 
 # 起動時に自動的に動くメソッド
 @bot.event
