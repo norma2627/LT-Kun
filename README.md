@@ -9,3 +9,21 @@
 
 ## デプロイ先
 - [Koyeb](https://app.koyeb.com)
+
+## 環境構築
+### デバッグ用Botとサーバー作成
+ローカルからデバッグをするためのDiscord Botの作成などを記載しています。
+[デバッグ環境のセットアップ](./docs/setup-dev.md)
+
+### Build
+コンテナをビルドする。  
+```sh
+docker build -t -lt-kun .
+```
+
+コンテナを実行する。  
+```sh
+docker run lt-kun
+```
+
+Discordから`/get`などのコマンドを実行する。  
