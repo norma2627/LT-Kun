@@ -15,7 +15,7 @@
 ローカルからデバッグをするためのDiscord Botの作成などを記載しています。
 [デバッグ環境のセットアップ](./docs/setup-dev.md)
 
-### Build
+### Development
 コンテナをビルドする。  
 ```sh
 docker build -t -lt-kun .
