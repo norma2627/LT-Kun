@@ -5,7 +5,7 @@
 ## Discord Botの作成
 1. [Discord Developer Portal](https://discord.com/developers/applications)へアクセスします。
 2. `New Application`から新しいアプリケーションを作成します。
-<img src="./images/new_application.png" width="50%" />
+<img src="./images/new_application.png" width="50%"/>
 <img src="./images/create_app.png" width="50%"/>
 
 3. サイドバーから`Bot`を選択し、`Reset Token`を押します。
