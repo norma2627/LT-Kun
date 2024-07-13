@@ -5,8 +5,8 @@
 ## Discord Botの作成
 1. [Discord Developer Portal](https://discord.com/developers/applications)へアクセスします。
 2. `New Application`から新しいアプリケーションを作成します。
-<img src="./images/new_application.png" />
-<img src="./images/create_app.png" />
+<img src="./images/new_application.png" width="50%" />
+<img src="./images/create_app.png" width="50%"/>
 
 3. サイドバーから`Bot`を選択し、`Reset Token`を押します。
 次のコマンドを実行して開発に必要な`.env`ファイルを作成します。(このトークンはコミットされません。)  
@@ -18,11 +18,11 @@ echo "生成されたトークン" >> .env
 4. そのまま`Bot`ページの下の`Privileged Gateway Intents`へ行きます
 `PRESENCE INTENT, SERVER MEMBERS INTENT, MESSAGE CONTENT INTENT`全て許可します。  
 
-<img src="./images/allow_intents.png" />
+<img src="./images/allow_intents.png" width="50%"/>
 
 ## テストBotをデバッグ用サーバーに参加させる
 1. サイドバーから`OAuth2`へ移動する
 2. `SCOPES`で`bot`と`applications.commands`を許可する
-<img src="./images/scopes.png" />
+<img src="./images/scopes.png" width="50%"/>
 3. 一番下の`GENERATED URL`をコピーしてブラウザでアクセスします。
 4. デバッグ用のサーバーに参加させてください
